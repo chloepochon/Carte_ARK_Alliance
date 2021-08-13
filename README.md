@@ -1,7 +1,7 @@
 # Carte des autorités nommantes de l'ARK Alliance
 
 
-:camera_flash: **Présentation du projet**
+:earth_africa: **Présentation du projet**
 
 Cette carte a été développée durant mon stage réalisé au SIAF dans le cadre de ma deuxième année de master "Technologies numériques appliquées à l'Histoire" de l'Ecole nationale des chartes.
 La carte représente l'ensemble des autorités nommantes inscrites au registre international ARK disponible à cette adresse : https://n2t.net/e/pub/naan_registry.txt
@@ -35,14 +35,14 @@ Il comprend également le fichier des données formatées en GeoJSON et l'image 
  * Enfin l'utilisateur-ice devra cloner le dossier : `git clone https://github.com/chloepochon/Carte_ARK_Alliance`
  
  * Il pourra alors lancer la carte : 
-    - Via le terminal dans le dossier du projet, simuler le server http : `python3 -m http.server`
-    - Aller sur http://0.0.0.0:8000/ 
-    - Cliquer sur map_ark_alliance.html
+    - Via le terminal dans le dossier du projet, simulez le serveur HTTP : `python3 -m http.server`
+    - Allez sur http://0.0.0.0:8000/ 
+    - Cliquez sur map_ark_alliance.html
   
   
- :earth_africa: ** Utilisation **
+  :world_map: **Utilisation**
   
-  - Dans le fichier CSV, entrer l'adresse de votre choix dans la colonne 'address_map'
-  - Dans votre terminal, lancer le calcul avec la commande python `python geocode_geojson.py`
-  - Fermer le fichier.
-  - Réactualiser la carte pour voir le nouveau marqueur apparaître.
+  - Dans le fichier CSV, entrez l'adresse de votre choix dans la colonne 'address_map'
+  - Fermez le fichier.
+  - Dans votre terminal, lancez le calcul avec la commande python `python geocode_geojson.py`
+  - Réactualisez la carte pour voir le nouveau marqueur apparaître.
