@@ -11,9 +11,9 @@ La carte représente l'ensemble des autorités nommantes inscrites au registre i
 :gear: **Les fonctionnalités**
 
 Le projet comprend trois fichiers principaux :
-* Le fichier CSV reprend l'ensemble des données du registre et ont été enrichies.
+* Le fichier CSV reprenant l'ensemble des données du registre qui ont été enrichies.
 * Un script Python permettant le calcul des coordonnées géographiques à partir du fichier CSV et le formatage de l'ensemble des données en GeoJSON.
-* Un fichier HTML pour la représentation de la carte.
+* Un fichier HTML pour l'affichage de la carte.
 
 Il comprend également le fichier des données formatées en GeoJSON et l'image PNG pour l'affichage des marqueurs.
   
