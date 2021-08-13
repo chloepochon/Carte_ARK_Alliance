@@ -1,4 +1,4 @@
-# Carte des autorités nommantes de l'ARK Alliance
+# Carte des autorités nommantes de l'Ark Alliance
 
 
 :earth_africa: **Présentation du projet**
@@ -35,14 +35,16 @@ Il comprend également le fichier des données formatées en GeoJSON et l'image 
  * Enfin l'utilisateur-ice devra cloner le dossier : `git clone https://github.com/chloepochon/Carte_ARK_Alliance`
  
  * Il pourra alors lancer la carte : 
-    - Via le terminal dans le dossier du projet, simulez le serveur HTTP : `python3 -m http.server`
-    - Allez sur http://0.0.0.0:8000/ 
-    - Cliquez sur map_ark_alliance.html
+    - Via le terminal dans le dossier du projet, simuler le serveur HTTP : `python3 -m http.server`
+    - Aller sur http://0.0.0.0:8000/ 
+    - Cliquer sur map_ark_alliance.html
   
   
   :world_map: **Utilisation**
   
-  - Dans le fichier CSV, entrez l'adresse de votre choix dans la colonne 'address_map'
-  - Fermez le fichier.
-  - Dans votre terminal, lancez le calcul avec la commande python `python geocode_geojson.py`
-  - Réactualisez la carte pour voir le nouveau marqueur apparaître.
+  Pour utiliser les fonctions de géocodage : 
+  
+  - Dans le fichier CSV, entrer l'adresse de son choix dans la colonne 'address_map'
+  - Sauvegarder et fermer le fichier.
+  - Dans le terminal, lancer le calcul avec la commande python `python geocode_geojson.py`
+  - Réactualiser la carte pour voir le nouveau marqueur apparaître.
