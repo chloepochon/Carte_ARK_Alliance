@@ -1,0 +1,100 @@
+<html><head>
+<title>NAAN Registry GeoJsonMap</title>
+<meta charset="utf-8">
+
+<!-- Librairies LEAFLET -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+<!-- Librairie jQuery pour requêter et lire le fichier geoJson -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+<style>
+#mapdiv {
+	width: 800px;
+	height: 600px;
+}
+
+</style>
+</head>
+
+
+<body>
+	<div id="mapdiv" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative; outline: none;">  </div>
+
+
+
+<script>
+
+	// Cette carte a été développée suite à la réalisation de la carte pour le portail FranceArchives
+	// D'après les exemples : 
+    // http://www.gistechsolutions.com/leaflet/DEMO/sports/index2.html
+    // https://www.youtube.com/watch?v=Pxa7PPqp6Fc
+    // Documentation généraliste : https://leafletjs.com/reference-1.7.1.html
+
+// On crée une variable pour appeler  le fichier GeoJSON comprenant les données du registre formaté
+var url = 'http://0.0.0.0:8000/data_registry.geojson';
+
+
+// On crée la variable pour le marqueur
+var redpin = L.icon({
+    iconUrl: 'redpin.png',
+    iconSize: [12, 12]
+});
+
+
+	// On initie la carte, le niveau de zoom minimal ainsi que la vue et le niveau de zoom au chargement de la page
+	var map = L.map('mapdiv', {minZoom: 1.4}).setView([4.7485100, -6.6363000], 1.4); 
+
+
+// On définit le fond de carte et on l'ajoute à la carte : https://leaflet-extras.github.io/leaflet-providers/preview/
+	var osm = new L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{ 
+				attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+	
+
+// On crée la variable qui contiendra la "couche vectorielle" de tous les marqueurs
+       var markers = L.geoJson(null, {
+
+       		// On appose un marqueur pour chaque point (coordonnées géographiques)
+			
+            pointToLayer: function(feature, latlng) {
+				return L.marker(latlng, {icon: redpin}, {
+                opacity: 1 });  //.bindTooltip(feature.properties.Name);
+
+        },
+
+        	// Pour chaque marqueur ...
+        	// on définit une infobulle qui contiendra les données souhaitées
+			onEachFeature: function (feature, layer) {
+				layer._leaflet_id = feature.properties.who;
+
+				// On recupère les données dans le GeoJSON en les ciblant via le chemin "feature.properties[KEY]"
+			
+				var popupContent = "<p><b>" +
+				feature.properties.who + "</b></br>" + 
+				" <b>Address :</b> " + feature.properties.address_location + "</br>" + 
+				// Documentation : https://alexandre.alapetite.fr/doc-alex/alx_mailto.html
+				"<b>Contact</b> : " + feature.properties.contact_surname + ', ' + feature.properties.contact_firstname + ' (' + '<a href="mailto:'+ feature.properties.contact_email +'" target="_blank">' + feature.properties.contact_email + '</a>)' +
+				"</br><b>Website  or resolver : </b>" +'<a href="'+ feature.properties.where +'" target="_blank"><i>'+ feature.properties.where +'<i></a></p>' ;
+						
+					// On relie cette infobulle au marqueur
+					layer.bindPopup(popupContent);
+			
+
+			},
+
+
+		});
+
+		// On opère une requête GET vers le fichier GeoJSON localisé via l'URL prédéfinie
+	$.getJSON(url, function(data) {	
+	// On ajoute les données du fichier GeoJSON à la couche vectorielle des marqueurs
+	// Et on ajoute cette couche vectorielle à la carte		
+		markers.addData(data).addTo(map);
+	});	
+
+
+ </script>
+
+
+</body></html>
