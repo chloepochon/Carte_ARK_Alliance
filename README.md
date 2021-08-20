@@ -3,7 +3,7 @@
 
 :earth_africa: **Présentation du projet**
 
-Cette carte a été développée durant mon stage réalisé au Service interministériel des Archives de France (SIAF) dans le cadre de ma deuxième année de master "Technologies numériques appliquées à l'Histoire" de l'École nationale des chartes.
+Cette carte a été développée par Chloé Pochon durant un stage réalisé au Service interministériel des Archives de France (SIAF), dans le cadre de la deuxième année de master "Technologies numériques appliquées à l'Histoire" de l'École nationale des chartes.
 La carte représente l'ensemble des autorités nommantes inscrites au registre international ARK disponible à cette adresse : https://n2t.net/e/pub/naan_registry.txt
 > NB : Cette carte ne représente que les autorités nommantes inscrites au registre au 12 juillet 2021.
 
