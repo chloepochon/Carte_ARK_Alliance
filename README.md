@@ -44,9 +44,9 @@ Il comprend également le fichier des données formatées en GeoJSON et l'image 
   
   Pour utiliser les fonctions de géocodage : 
   
-  - Dans le fichier CSV, entrer l'adresse de son choix dans la colonne 'address_map'
-  - Sauvegarder et fermer le fichier.
-  - Dans le terminal
-        Sourcer l'environnement virtuel `source env/bin/activate`
-        Lancer le calcul avec la commande python `python geocode_geojson.py`
-  - Réactualiser la carte pour voir le nouveau marqueur apparaître.
+  * Dans le fichier CSV, entrer l'adresse de son choix dans la colonne 'address_map'
+  * Sauvegarder et fermer le fichier.
+  * Dans le terminal
+       - Sourcer l'environnement virtuel `source env/bin/activate`
+       - Lancer le calcul avec la commande python `python geocode_geojson.py`
+  * Réactualiser la carte pour voir le nouveau marqueur apparaître.
