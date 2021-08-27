@@ -19,7 +19,7 @@ Il comprend également le fichier des données formatées en GeoJSON et l'image 
   
 :desktop_computer: **Installation**
  
- * Via son terminal, l'utilisateur-ice doit créer un environement virtuel dans un dossier de son choix : `virtualenv env -p python3`
+ * Via son terminal, l'utilisateur doit créer un environement virtuel dans un dossier de son choix : `virtualenv env -p python3`
  * L'utilisateur-ice devra installer des packages et libraries : 
   1. Pour cela il doit sourcer son environnement virtuel 
     -> dans le dossier choisi faire la commande `source env/bin/activate` 
@@ -32,7 +32,7 @@ Il comprend également le fichier des données formatées en GeoJSON et l'image 
   3. Vérifier que tout est bien installé : `pip freeze`
   4. Désactiver l'environnement : `deactivate`
  
- * Enfin l'utilisateur-ice devra cloner le dossier : `git clone https://github.com/chloepochon/Carte_ARK_Alliance`
+ * Enfin l'utilisateur devra cloner le dossier : `git clone https://github.com/chloepochon/Carte_ARK_Alliance`
  
  * Il pourra alors lancer la carte : 
     - Via le terminal dans le dossier du projet, simuler le serveur HTTP : `python3 -m http.server`
