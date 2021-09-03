@@ -20,7 +20,7 @@ Il comprend également le fichier des données formatées en GeoJSON et l'image 
 :desktop_computer: **Installation**
  
  * Via son terminal, l'utilisateur doit créer un environnement virtuel dans un dossier de son choix : `virtualenv env -p python3`
- * L'utilisateur-ice devra installer des packages et libraries : 
+ * L'utilisateur devra installer des packages et libraries : 
   1. Pour cela il doit sourcer son environnement virtuel 
     -> dans le dossier choisi faire la commande `source env/bin/activate` 
   2.  Puis : 
